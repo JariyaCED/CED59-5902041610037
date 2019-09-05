@@ -8,8 +8,18 @@ class TestController extends Controller
 {
     public function actionIndex(){
 
-        echo 'test';
+        $data =  'data test';
+        return $this->render('index',['data' => $data]);
 
     }
+
+    
+    public function actionTest(){
+
+        echo 'test01';
+        return $this->render('test');
+
+    }
+
 
 }
