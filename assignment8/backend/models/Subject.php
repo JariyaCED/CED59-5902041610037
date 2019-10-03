@@ -7,7 +7,7 @@ use yii\behaviors\BlameableBehavior;
 class Subject extends \common\models\Subject
 {
 public function behaviors()
-{
+    {
 
 
     return[
@@ -16,6 +16,17 @@ public function behaviors()
 
     ];
 
-}
+    }
+
+    public function rules()
+    {
+        return[
+           ['name','required','message' => 'please fill data'],
+           ['name','email','message' => 'please mail ']
+
+        ];
+
+
+    }
 
 }
